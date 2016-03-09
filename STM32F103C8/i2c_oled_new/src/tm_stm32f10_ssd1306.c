@@ -142,7 +142,7 @@ TM_SSD1306_initDMA (void)
  DMA_ITConfig (SSD1306_DMA, DMA_IT_TC, ENABLE); // enable transmit complete interrupt
  DMA_ClearFlag (DMA1_IT_TC6);
  // set interupt controller for DMA1C6
- NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel6_IRQn; //I2C1 connect to channel 7 of DMA1
+ NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel6_IRQn; //I2C1 TX connect to channel 6 of DMA1, as per datasheet Table 78
  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x05;
  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x05;
  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
