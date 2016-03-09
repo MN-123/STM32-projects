@@ -1,0 +1,1 @@
+Contains projects developed for STM32F103C8. May work on other devices, but most likely needs porting or at least a good one-over

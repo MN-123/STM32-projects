@@ -1,0 +1,1 @@
+Contains projects developed for a STM32F407VG on STM32F4 discovery board. May work on other devices, but most likely needs porting or at least a good one-over
