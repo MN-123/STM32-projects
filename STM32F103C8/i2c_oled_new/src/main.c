@@ -25,7 +25,9 @@ main ()
  GPIO_InitStruct.GPIO_Speed = GPIO_Speed_10MHz;
  GPIO_Init (LEDPORT, &GPIO_InitStruct);
  GPIO_SetBits (LEDPORT, LEDPIN); //led is active low
-
+ 
+ // waste time to give oled a chance to power up
+ for (uint32_t i = 0; i < 0x100000; i++);
  // initialize the OLED Display
  trace_puts (TM_SSD1306_Init () ? "OLED ready" : "OLED error");
 
